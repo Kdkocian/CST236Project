@@ -6,6 +6,7 @@ include 'functions.php';
 </head>
 <body>
 <h2>Login was successful</h2>
-<button onclick="logOut()">Log Out</button>
+<script type="text/javascript"> function logout(){ sessionStorage.clear(); window.location.href="login.html";}</script>
+<input type = "button" value = "Log Out" onclick = "logout();">
 </body>
 </html>

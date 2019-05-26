@@ -1,7 +1,7 @@
 <?php
     function logOut()
     {
-    session_close();
+    sessionStorage.clear();
     header("Location: /views/login.html");
     }
 ?>
