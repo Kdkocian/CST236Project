@@ -7,22 +7,28 @@ $lName = mysqli_real_escape_string($conn, $_POST['lName']);
 $uName = mysqli_real_escape_string($conn, $_POST['uName']);
 $pWord = mysqli_real_escape_string($conn, $_POST['pWord']);
 
-    if ($fName == ""){
+    if ($fName == "")
+    {
         echo " The First Name cannot be blank ";
     }
-    if ($lName == ""){
+    if ($lName == "")
+    {
         echo " The Last Name cannot be blank ";
     }
-    if ($uName == ""){
+    if ($uName == "")
+    {
         echo "Please submit a username";
     }
-    if ($pWord == ""){
+    if ($pWord == "")
+    {
         echo "Please submit a password";
     }
 
 $sql = "INSERT INTO users(firstName, lastName, userName, passWord) VALUES('$fName', '$lName', '$uName', '$pWord')";
 
 mysqli_query($conn, $sql);
+
+header("Location: login.html");
 
 mysqli_close($conn);
 
