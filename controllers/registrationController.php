@@ -1,4 +1,5 @@
 <?php
+include '../database.php';
 $db = new myfuncs();
 $conn = $db->dbConnect();
 
@@ -28,8 +29,7 @@ $sql = "INSERT INTO users(firstName, lastName, userName, passWord) VALUES('$fNam
 
 mysqli_query($conn, $sql);
 
-header("Location: ../views/login.html");
-
 mysqli_close($conn);
 
+header("Location: ../views/login.html");
 ?>
