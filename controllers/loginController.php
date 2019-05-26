@@ -19,7 +19,7 @@ $sql = "SELECT * From users Where userName = '$uName'";
 $result = mysqli_query($conn, $sql) or die ("Failed to query database". mysql_error());
 $row = mysqli_fetch_array($result);
 
-    if ($row['PASSWORD'] == $pWord )
+    if ($row['passWord'] == $pWord )
         {
             mysqli_close($conn);
             header("Location: ../views/loginSuccessful.php");
