@@ -28,7 +28,7 @@ $sql = "INSERT INTO users(firstName, lastName, userName, passWord) VALUES('$fNam
 
 mysqli_query($conn, $sql);
 
-header("Location: login.html");
+header("Location: ../views/login.html");
 
 mysqli_close($conn);
 
