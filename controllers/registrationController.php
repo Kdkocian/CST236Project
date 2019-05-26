@@ -1,24 +1,29 @@
 <?php
-$fname = mysqli_real_escape_string($conn, $_POST['fName']);
-$lname = mysqli_real_escape_string($conn, $_POST['lName']);
-$uname = mysqli_real_escape_string($conn, $_POST['uName']);
-$pword = mysqli_real_escape_string($conn, $_POST['pWord']);
+$db = new myfuncs();
+$conn = $db->dbConnect();
 
-    if ($fname == ""){
+$fName = mysqli_real_escape_string($conn, $_POST['fName']);
+$lName = mysqli_real_escape_string($conn, $_POST['lName']);
+$uName = mysqli_real_escape_string($conn, $_POST['uName']);
+$pWord = mysqli_real_escape_string($conn, $_POST['pWord']);
+
+    if ($fName == ""){
         echo " The First Name cannot be blank ";
     }
-    if ($lname == ""){
+    if ($lName == ""){
         echo " The Last Name cannot be blank ";
     }
-    if ($uname == ""){
+    if ($uName == ""){
         echo "Please submit a username";
     }
-    if ($pword == ""){
+    if ($pWord == ""){
         echo "Please submit a password";
     }
 
-$sql = "INSERT INTO users(firstName, lastName, userName, passWord) VALUES('$fname', '$lname', '$uname', '$pword')";
+$sql = "INSERT INTO users(firstName, lastName, userName, passWord) VALUES('$fName', '$lName', '$uName', '$pWord')";
+
+mysqli_query($conn, $sql);
+
+mysqli_close($conn);
 
 ?>
-
-
