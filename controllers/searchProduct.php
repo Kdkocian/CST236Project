@@ -11,6 +11,6 @@ $result = mysqli_query($conn, $sql);
 
 while($row = mysqli_fetch_array($result))
 {
-    echo $row['productID'], $row['productName'], $row['productDescript'];
+    echo $row['productID'], $row['productName'], $row['productDescript'] ."<br>";
 }
-echo "<a href='../views/searchpage.php'>Searchpage</a>";
+echo "<a href='../views/searchProductview.php'>Searchpage</a>";
