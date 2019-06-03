@@ -8,7 +8,7 @@ $searchresult = mysqli_real_escape_string($conn, $_GET['SearchBar']);
 $sql = "Select * from products where productName LIKE '%$searchresult%'";
 
 $result = mysqli_query($conn, $sql);
-echo "<tr><td>Product ID</td><td>Product Name</td><td>Product Description</td></tr>";
+echo "<tr><td>Product ID </td><td>Product Name </td><td>Product Description</td></tr>" . "<br>";
 while($row = mysqli_fetch_array($result))
 {
     echo '<link rel="stylesheet" type="text/css" href="style.css">';
