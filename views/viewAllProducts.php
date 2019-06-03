@@ -6,7 +6,7 @@ $conn = $db->dbConnect();
 $sql = "SELECT * FROM products";
 
 $result = $conn->query($sql);
-echo "<tr><td>Product ID </td><td>Product Name</td><td>Product Description</td></tr>";
+echo "<tr><td>Product ID </td><td>Product Name</td><td>Product Description</td></tr>" . "<br>";
 if ($result->num_rows > 0)
 {
     while($row = $result->fetch_assoc())
