@@ -6,15 +6,14 @@ $conn = $db->dbConnect();
 $sql = "SELECT * FROM products";
 
 $product = mysqli_real_escape_string($conn, $sql);
-echo "<table>";
-echo "<tr><td>Product ID </td><td>Product Name </td><td>Product Description</td></tr>";
-for($x = 0; $x < count((array)$product); $x++)
+
+echo "<tr><td>Product ID </td><td>Product Name </td><td>Product Description</td></tr>" . "<br>";
+while($row = mysqli_fetch_array($product))
 {
-        echo "<tr>";
-        echo "<td>" . $product[$x][0] . "</td>" .
-            "<td>" . $product[$x][1] . "</td>" .
-            "<td>" . $product[$x][2] . "</td>" ;
-        echo "</tr>";
+    echo '<link rel="stylesheet" type="text/css" href="style.css">';
+    echo "<table>";
+    echo $row['productID']," ", $row['productName'], " ", $row['productDescript'] ."<br>";
+    echo "</table>";
 }
-echo "</table>"
+
 ?>
