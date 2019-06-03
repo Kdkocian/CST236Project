@@ -5,15 +5,14 @@ $conn = $db->dbConnect();
 
 $sql = "SELECT * FROM products";
 
-$product = mysqli_real_escape_string($conn, $sql);
+$result = $conn->query($sql);
 
-echo "<tr><td>Product ID </td><td>Product Name </td><td>Product Description</td></tr>" . "<br>";
-while($row = mysqli_fetch_array($product))
+if ($result->num_rows > 0)
 {
-    echo '<link rel="stylesheet" type="text/css" href="style.css">';
-    echo "<table>";
-    echo $row['productID']," ", $row['productName'], " ", $row['productDescript'] ."<br>";
-    echo "</table>";
+    while($row = $result->fetch_assoc())
+    {
+        echo $row['productID']," ", $row['productName'], " ", $row['productDescript'] ."<br>";
+    }
 }
 
 ?>
