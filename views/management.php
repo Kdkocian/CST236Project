@@ -1,7 +1,6 @@
 <?php
 require_once '../database.php';
 require_once '../functions.php';
-require_once '../controllers/manageall.php';
 $db= new funcs();
 ?>
 
@@ -18,7 +17,6 @@ $db= new funcs();
 	</tr>
     <?php
     $user = $db->getAllusers();
-    $action = $
     for($id = 0;$id < count($user);$id++){
         echo "<form action = '../controllers/manageall.php' method = 'POST'>";
         echo "<tr>";
