@@ -12,7 +12,7 @@
     {
         
     }
-    if(isset($_POST['delete']))
+    if(isset($_POST['Delete']))
     {
         $id = mysqli_real_escape_string($conn, $_POST['ID']);
         $sql= "DELETE FROM products WHERE ID = '$id'";
