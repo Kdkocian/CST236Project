@@ -6,12 +6,21 @@ $db= new funcs();
 
 <html>
     <head>
-    	<title>Manage Users</title>
+    	<title>Manage Products</title>
     	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   		<link rel="stylesheet" href="../CSS/viewAllProductscss.css"/>
     </head>
     <body>
 <?php
     echo '<ul id="content" class="list-unstyled">';
+    echo '<li>';
+    echo "<div class='row'>";
+    echo "<div class='col-md-2'>Product ID</div>";
+    echo "<div class='col-md-3'>Product Name</div>";
+    echo "<div class='col-md-3'>Product Description</div>";
+    echo "<div class='col-md-3'>Product In Stock</div>";
+    echo "<div class='col-md-4'>crud</div>";
+    echo '</li>';
     $product = $db->getAllproducts();
     for($id = 0;$id < count($product);$id++){
     echo '<li>';
