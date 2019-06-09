@@ -1,6 +1,7 @@
 <?php
 require_once '../database.php';
 require_once '../functions.php';
+require_once '../controllers/manageall.php';
 $db= new funcs();
 ?>
 
@@ -17,6 +18,7 @@ $db= new funcs();
 	</tr>
     <?php
     $user = $db->getAllusers();
+    $action = $
     for($id = 0;$id < count($user);$id++){
         echo "<form action = '../controllers/manageall.php' method = 'POST'>";
         echo "<tr>";
@@ -29,7 +31,7 @@ $db= new funcs();
         echo '<td><input type = "hidden" name = "ID" value = "'.$user[$id][0].'"><input type="submit" name = "Delete" value="Delete" /></td>';
         echo "</form></tr>";        
     }
-    echo "<a href='../views/viewAllProducts.php'>Back to View Users</a>";
+    echo "<a href='../views/loginSuccessful.php'>Back to Login Success</a>";
     ?>
     </table>
     </body>
