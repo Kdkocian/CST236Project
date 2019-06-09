@@ -29,10 +29,10 @@ $db= new funcs();
             echo '<input type="submit" name = "ADD" value="Add" /></td>';
         echo "</form>";
         echo "<form action = '../controllers/manageProducts.php' method = 'POST'>";
-        echo '<td><input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "Delete" value="delete" /></td>';
+        echo '<td><input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "delete" value="Delete" /></td>';
         echo "</form></tr>";
         echo "<form action = '../controllers/manageProducts.php' method = 'POST'>";
-        echo '<td><input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "Edit" value="EDIT" /></td>';
+        echo '<td><input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "EDIT" value="Edit" /></td>';
         echo "</form></tr>";
     }
     echo "<a href='../views/loginSuccessful.php'>Back to Login Success</a>";
