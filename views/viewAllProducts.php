@@ -13,8 +13,8 @@ $db= new funcs();
     <tr>
     	<th>Product ID</th>
     	<th>Product Name</th>
-    	<th>Product in Stock</th>
     	<th>Product Description</th>
+    	<th>Product in Stock</th>
 	</tr>
     <?php
     $product = $db->getAllproducts();
