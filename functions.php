@@ -1,4 +1,5 @@
 <?php
+include_once '../database.php';
 class funcs
 {
     
@@ -30,7 +31,7 @@ class funcs
     {
        $db = new myfuncs();
        $conn = $db->dbConnect();
-       $sql = "SELECT ID, productName, productDescript, productImage FROM products";
+       $sql = "SELECT productID, productName, productDescript, productImage FROM products";
        $products = array();
        $result = mysqli_query($conn, $sql);
        

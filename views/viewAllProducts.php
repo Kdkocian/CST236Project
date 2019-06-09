@@ -11,9 +11,10 @@ $db= new funcs();
     <body>
     <table>
     <tr>
-    	<th>ID</th>
-    	<th>Username</th>
-    	<th>Delete/MakeAdmin</th>
+    	<th>Product ID</th>
+    	<th>Product Name</th>
+    	<th>Product Description</th>
+    	<th>Product Image</th>
 	</tr>
     <?php
     $product = $db->getAllproducts();
