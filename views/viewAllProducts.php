@@ -24,7 +24,7 @@ $db= new funcs();
                 echo '<div classs="col-md-4"><input type = "hidden" name = "ID" value = "'.$product[$id][0].'">';
                 echo '<input type="submit" name = "ADD" value="Add" /></div>';
                 echo '<input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "delete" value="Delete" />';
-                echo '<td><input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "EDIT" value="Edit" />';
+                echo '<input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "EDIT" value="Edit" />';
             echo "</div>";
         echo "</form>";
     echo '</li>';
