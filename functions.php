@@ -37,7 +37,7 @@ class funcs
        
        while($row = mysqli_fetch_array($result))
        {
-            $products[] = array($row['ID'], $row['productName'], $row['productDescript'], $row['productImage']);    
+            $products[] = array($row['productID'], $row['productName'], $row['productDescript'], $row['productImage']);    
        }
        mysqli_close($conn);
        return $products;
