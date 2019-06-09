@@ -31,13 +31,13 @@ class funcs
     {
        $db = new myfuncs();
        $conn = $db->dbConnect();
-       $sql = "SELECT productID, productName, productDescript, productImage FROM products";
+       $sql = "SELECT productID, productName, productDescript, inStock, productImage FROM products";
        $products = array();
        $result = mysqli_query($conn, $sql);
        
        while($row = mysqli_fetch_array($result))
        {
-            $products[] = array($row['productID'], $row['productName'], $row['productDescript'], $row['productImage']);    
+            $products[] = array($row['productID'], $row['productName'], $row['productDescript'], $row['inStock'], $row['productImage']);    
        }
        mysqli_close($conn);
        return $products;
