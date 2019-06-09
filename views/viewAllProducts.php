@@ -14,7 +14,6 @@ $db= new funcs();
     	<th>Product ID</th>
     	<th>Product Name</th>
     	<th>Product Description</th>
-    	<th>Product Image</th>
 	</tr>
     <?php
     $product = $db->getAllproducts();
