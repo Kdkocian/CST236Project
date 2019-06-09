@@ -19,7 +19,7 @@ $db= new funcs();
     <?php
     $product = $db->getAllproducts();
     for($id = 0;$id < count($product);$id++){
-        echo "<form action = '../controllers/manageall.php' method = 'POST'>";
+        echo "<form action = '../controllers/manageProducts.php' method = 'POST'>";
         echo "<tr>";
             echo "<td>".$product[$id][0]."</td>";
             echo "<td>".$product[$id][1]."</td>";
@@ -28,7 +28,7 @@ $db= new funcs();
             echo '<td><input type = "hidden" name = "ID" value = "'.$product[$id][0].'">';
             echo '<input type="submit" name = "ADD" value="Add" /></td>';
         echo "</form>";
-        echo "<form action = '../controllers/manageall.php' method = 'POST'>";
+        echo "<form action = '../controllers/manageProducts.php' method = 'POST'>";
         echo '<td><input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "Delete" value="delete" /></td>';
         echo "</form></tr>";
         echo "<form action = '../controllers/manageProducts.php' method = 'POST'>";
