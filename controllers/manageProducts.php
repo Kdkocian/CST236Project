@@ -5,7 +5,7 @@
     
     if(isset($_POST['EDIT']))
     {
-        $id = mysqli_real_escape_string($conn, $_POST['productID']);
+        $id = mysqli_real_escape_string($conn, $_POST['ID']);
         $pname = mysqli_real_escape_string($conn, $_POST['productName']);
         $descript = mysqli_real_escape_string($conn, $_POST['productDescript']);
         $inStock = mysqli_real_escape_string($conn, $_POST['inStock']);
