@@ -1,8 +1,10 @@
 <?php
 require_once '../database.php';
+require_once '../functions.php';
 session_start();
 $db = new myfuncs();
 $conn = $db->dbConnect();
+$funcs = new funcs();
 
 $uName = mysqli_real_escape_string($conn, $_POST['uName']);
 $pWord = mysqli_real_escape_string($conn, $_POST['pWord']);
@@ -22,6 +24,7 @@ $row = mysqli_fetch_array($result);
 
     if ($row['passWord'] == $pWord )
         {
+            $funcs->setUseradmin($row['admin']);
             mysqli_close($conn);
             header("Location: ../views/loginSuccessful.php");
         }
