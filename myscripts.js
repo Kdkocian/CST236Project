@@ -14,9 +14,9 @@ function createEditField(rownum, pID, pName, pDescript, instock)
 		descriptInput.name = "productDescript";
 		descriptInput.innerHTML = pDescript;
 	var inStockInput = document.createElement("input");
-		inStockinput.type = "text";
-		inStockinput.name = "inStock";
-		inStockinput.value = instock;
+		inStockInput.type = "text";
+		inStockInput.name = "inStock";
+		inStockInput.value = instock;
 		
 	var editSubmit = document.createElement("input");
 		editSubmit.name = "EDIT";
@@ -25,7 +25,7 @@ function createEditField(rownum, pID, pName, pDescript, instock)
 		
 	row.childNodes[1].replaceChild(nameInput, name);
 	row.childNodes[2].replaceChild(descriptInput, descript);
-	row.childNodes[3].replaceChild(inStockinput, inStock);
+	row.childNodes[3].replaceChild(inStockInput, inStock);
 	row.childNodes[4].replaceChild(editSubmit, editButton);
 }
 
