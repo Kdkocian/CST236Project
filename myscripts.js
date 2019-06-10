@@ -1,10 +1,10 @@
 function createEditField(rownum, pID, pName, pDescript, instock)
 {
 	var row = document.getElementById(rownum);
-	var name = row.childNodes[1].childNodes;
-	var descript = row.childNodes[2].childNodes;
-	var inStock = row.childNodes[3].childNodes;
-	var editButton = row.childNodes[4].childNodes[2];
+	var name = row.childNodes[1].childNodes[0];
+	var descript = row.childNodes[2].childNodes[0];
+	var inStock = row.childNodes[3].childNodes[0];
+	var editButton = row.childNodes[4].childNodes[3];
 	
 	var nameInput = document.createElement("input");
 		nameInput.type = "text";

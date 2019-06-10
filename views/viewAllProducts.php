@@ -39,7 +39,7 @@ $db= new funcs();
                 echo "<div class='col-md-3'>";
                     echo "<label>".$product[$id][3]."</label>";
                 echo "</div>";
-                echo '<div classs="col-md-4"><input type = "hidden" name = "ID" value = "'.$product[$id][0].'">';
+                echo '<div classs="col-md-4">';
                 echo '<input type="submit" name = "ADD" value="Add" />';
                 echo '<input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "delete" value="Delete" />';
                 echo '<input type="button" class="editButton" name="edit" value="Edit" onclick="createEditField('.$id.', \''.$product[$id][0].'\', \''.$product[$id][1].'\', \''.$product[$id][2].'\', \''.$product[$id][3].'\')"/>';
