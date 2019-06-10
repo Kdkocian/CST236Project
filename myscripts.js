@@ -40,14 +40,14 @@ function createAddField()
 	var nameInput = document.createElement("input");
 		nameInput.type = "text";
 		nameInput.name = "productName";
-		nameInput.value = pName;
+		
 	var descriptInput = document.createElement("textarea");
 		descriptInput.name = "productDescript";
-		descriptInput.innerHTML = pDescript;
+		
 	var inStockInput = document.createElement("input");
 		inStockInput.type = "text";
 		inStockInput.name = "inStock";
-		inStockInput.value = instock;
+		
 		
 	var addSubmit = document.createElement("input");
 		addSubmit.name = "ADD";
