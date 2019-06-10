@@ -29,7 +29,7 @@ function createEditField(rownum, pID, pName, pDescript, instock)
 	row.childNodes[4].replaceChild(editSubmit, editButton);
 }
 
-function createAddfield()
+function createAddField()
 {
 	var list = document.getElementsByTagName("ul");
 	var form = document.createElement("form");
