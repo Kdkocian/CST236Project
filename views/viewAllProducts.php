@@ -19,7 +19,14 @@ $db= new funcs();
     echo "<div class='col-md-3'>Product Name</div>";
     echo "<div class='col-md-3'>Product Description</div>";
     echo "<div class='col-md-3'>Product In Stock</div>";
+    if ($db->getUseradmin())
+    {
     echo "<div class='col-md-4'>CRUD</div>";
+    }
+    else 
+    {
+    echo "<div class='col-md-4'>ORDER</div>";
+    }
     echo '</li>';
     $product = $db->getAllproducts();
     for($id = 0;$id < count($product);$id++)
@@ -39,11 +46,20 @@ $db= new funcs();
                 echo "<div class='col-md-3'>";
                     echo "<label>".$product[$id][3]."</label>";
                 echo "</div>";
+                if($db->getUseradmin())
+                {
                 echo '<div classs="col-md-4">';
                 echo '<input type="button" name = "ADD" value="Add" onclick="createAddField()" />';
                 echo '<input type = "hidden" name = "ID" value = "'.$product[$id][0].'"><input type="submit" name = "delete" value="Delete" />';
                 echo '<input type="button" class="editButton" name="edit" value="Edit" onclick="createEditField('.$id.', \''.$product[$id][0].'\', \''.$product[$id][1].'\', \''.$product[$id][2].'\', \''.$product[$id][3].'\')"/>';
             echo "</div>";
+                } 
+                else 
+                {
+                    echo '<div classs="col-md-4">';
+                    echo '<input type="button" name = "Order" value="Order"/>';
+                    echo "</div>";
+                }
         echo "</form>";
     echo '</li>';
     }
