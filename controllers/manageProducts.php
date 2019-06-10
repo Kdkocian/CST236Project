@@ -18,9 +18,9 @@
     
     if(isset($_POST['ADD']))
     {
-        $productname = mysqli_real_escape_string($conn, $_POST['pName']);
-        $productDescript = mysqli_real_escape_string($conn, $_POST['pDescript']);
-        $inStock = mysqli_real_escape_string($conn, $_POST['instock']);
+        $productname = mysqli_real_escape_string($conn, $_POST['productName']);
+        $productDescript = mysqli_real_escape_string($conn, $_POST['productDescript']);
+        $inStock = mysqli_real_escape_string($conn, $_POST['inStock']);
         $sql = "INSERT INTO products(productName, productDescript, inStock) VALUES('$productname', '$productDescript', '$inStock')";
         
         mysqli_query($conn, $sql);

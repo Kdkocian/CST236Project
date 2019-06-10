@@ -29,3 +29,35 @@ function createEditField(rownum, pID, pName, pDescript, instock)
 	row.childNodes[4].replaceChild(editSubmit, editButton);
 }
 
+function createAddfield()
+{
+	var list = document.getElementsByTagName("ul");
+	var form = document.createElement("form");
+		form.action = "../controllers/manageProducts.php";
+			form.method = "POST";
+	var listitem = document.createElement("li");
+	
+	var nameInput = document.createElement("input");
+		nameInput.type = "text";
+		nameInput.name = "productName";
+		nameInput.value = pName;
+	var descriptInput = document.createElement("textarea");
+		descriptInput.name = "productDescript";
+		descriptInput.innerHTML = pDescript;
+	var inStockInput = document.createElement("input");
+		inStockInput.type = "text";
+		inStockInput.name = "inStock";
+		inStockInput.value = instock;
+		
+	var addSubmit = document.createElement("input");
+		addSubmit.name = "ADD";
+		addSubmit.type = "submit";
+		addSubmit.value = "Submit";
+	
+		form.appendChild(nameInput);
+		form.appendChild(descriptInput);
+		form.appendChild(instockInput);
+		form.appendChild(addSubmit);
+		listitem.appendChild(form);
+		list.appendChild(listitem);
+}
