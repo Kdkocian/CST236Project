@@ -31,7 +31,7 @@ function createEditField(rownum, pID, pName, pDescript, instock)
 
 function createAddField()
 {
-	var list = document.getElementsByTagName("ul");
+	var list = document.getElementById("content");
 	var form = document.createElement("form");
 		form.action = "../controllers/manageProducts.php";
 			form.method = "POST";
