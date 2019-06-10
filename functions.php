@@ -13,6 +13,10 @@ class funcs
         session_start();
         return $_SESSION["isadmin"] = $admin;
     }
+    function getUseradmin(){
+        session_start();
+        return $_SESSION["isadmin"];
+    }
     function getAllusers()
     {
         $db = new myfuncs();
