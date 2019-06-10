@@ -13,7 +13,7 @@
         $sql = "UPDATE products SET productName='$pname', productDescript='$descript', inStock='$inStock' WHERE productID='$id'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
-        header("Location: viewAllProducts.php");
+        header("Location: ../views/viewAllProducts.php");
     }
     
     if(isset($_POST['ADD']))
@@ -25,7 +25,7 @@
         
         mysqli_query($conn, $sql);
         mysqli_close($conn);
-        header("Location: viewAllProducts.php");
+        header("Location: ../views/viewAllProducts.php");
     }
     
     if(isset($_POST['delete']))
