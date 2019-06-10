@@ -56,7 +56,7 @@ function createAddField()
 	
 		form.appendChild(nameInput);
 		form.appendChild(descriptInput);
-		form.appendChild(instockInput);
+		form.appendChild(inStockInput);
 		form.appendChild(addSubmit);
 		listitem.appendChild(form);
 		list.appendChild(listitem);
