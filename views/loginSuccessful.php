@@ -1,6 +1,6 @@
 <?php
-include 'functions.php';
-require_once 'database.php';
+include '../functions.php';
+require_once '../database.php';
 $db = new funcs();
 ?>
 <html>
