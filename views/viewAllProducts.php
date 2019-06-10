@@ -50,5 +50,6 @@ $db= new funcs();
     echo '</ul>';
     echo "<a href='../views/loginSuccessful.php'>Back to Login Success</a>";
     ?>
+    <script src="../myscripts.js"></script>
     </body>
 </html>
