@@ -42,7 +42,7 @@
     {
         $productname = mysqli_real_escape_string($conn, $_POST['productName']);
         
-        $sql ="INSERT INTO cart(productNAme) Values('$productname')";
+        $sql ="INSERT INTO cart(productNAme) VALUES('$productname')";
         
         mysqli_query($conn, $sql);
         mysli_close($conn);
