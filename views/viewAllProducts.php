@@ -57,14 +57,14 @@ $db= new funcs();
                 else 
                 {
                     echo '<div classs="col-md-4">';
-                    echo '<input type="button" name = "Order" value="Order"/>';
+                    echo '<input type="submit" name = "Order" value="Order"/>';
                     echo "</div>";
                 }
         echo "</form>";
     echo '</li>';
     }
     echo '</ul>';
-    echo "<a href='../views/loginSuccessful.php'>Back to Login Success</a></br>";
+    echo "<a href='../views/loginSuccessful.php'>Back to Login Success</a>" ."</br>";
     echo "<a href='../views/cartView.php'>View Cart</a>";
     ?>
     <script src="../myscripts.js"></script>
