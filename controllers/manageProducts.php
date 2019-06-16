@@ -40,7 +40,7 @@
     
     if(isset($_POST['order']))
     {
-        $productname = mysqli_real_escape_string($conn, $_POST['ID']);
+        $productname = mysqli_real_escape_string($conn, $_POST['productName']);
         
         $sql ="INSERT INTO cart(productNAme) VALUES('$productname')";
         

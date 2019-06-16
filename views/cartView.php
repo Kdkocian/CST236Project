@@ -16,13 +16,15 @@ $db= new funcs();
 	</tr>
 	<?php
 	$product = $db->getAllIncart();
+	echo "<form action = '../controllers/manageProducts.php' method = 'POST'>";
 	for($id = 0;$id < count($product);$id++)
 	{
     	   echo "<tr>";
     	       echo "<td>".$product[$id][0]."</td>";
                echo "<td>".$product[$id][1]."</td>";
-           echo "</tr>";
+           echo "</form></tr>";
 	}
+	echo "<a href='../views/checkout.php'>Place Order</a>";
 	?>
     </table>
     </body>
