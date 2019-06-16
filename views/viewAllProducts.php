@@ -57,7 +57,7 @@ $db= new funcs();
                 else 
                 {
                     echo '<div classs="col-md-4">';
-                    echo '<input type="submit" name = "Order" value="Order"/>';
+                    echo '<input type="button" name = "Order" value="Order"/>';
                     echo "</div>";
                 }
         echo "</form>";
