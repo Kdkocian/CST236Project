@@ -38,9 +38,9 @@
         header("Location: ../views/viewAllProducts.php");
     }
     
-    if(isset($_POST['Order']))
+    if(isset($_POST['order']))
     {
-        $productname = mysqli_real_escape_string($conn, $_POST['Order']);
+        $productname = mysqli_real_escape_string($conn, $_POST['ID']);
         
         $sql ="INSERT INTO cart(productNAme) VALUES('$productname')";
         
