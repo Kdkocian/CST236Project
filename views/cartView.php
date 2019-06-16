@@ -18,10 +18,11 @@ $db= new funcs();
 	$product = $db->getAllIncart();
 	for($id = 0;$id < count($product);$id++)
 	{
-	   echo "<tr>";
-	       echo "<td>".$product[$id][0]."</td>";
-           echo "<td>".$product[$id][1]."</td>";
-       echo "</tr>";
+	    echo "<form action = ../contollers/manageProducts.php' method = 'POST'>";
+    	   echo "<tr>";
+    	       echo "<td>".$product[$id][0]."</td>";
+               echo "<td>".$product[$id][1]."</td>";
+           echo "</form></tr>";
 	}
 	?>
     </table>

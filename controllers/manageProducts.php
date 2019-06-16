@@ -46,6 +46,6 @@
         
         mysqli_query($conn, $sql);
         mysli_close($conn);
-        header("Location: cartView.php");
+        header("Location: ../views/cartView.php");
     }
 ?>
