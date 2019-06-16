@@ -46,5 +46,21 @@ class funcs
        mysqli_close($conn);
        return $products;
     }
+    function getAllIncart()
+    {
+        $db = new myfuncs();
+        $conn = $db->dbConnect();
+        
+        $sql = "SELECT productIDs, productNAme FROM cart";
+        $products = array();
+        $result = mysqli_query($conn, $sql);
+        
+        while($row = mysqli_fetch_array($result))
+        {
+            $products[] = array($row['productIDs'], $row['productNAme']);
+        }
+        mysqli_close($conn);
+        return $products;
+    }
 }
 ?>

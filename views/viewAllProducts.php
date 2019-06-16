@@ -65,6 +65,7 @@ $db= new funcs();
     }
     echo '</ul>';
     echo "<a href='../views/loginSuccessful.php'>Back to Login Success</a>";
+    echo "<a href='../views/cartView.php'>View Cart</a>";
     ?>
     <script src="../myscripts.js"></script>
     </body>

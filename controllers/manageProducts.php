@@ -37,4 +37,15 @@
         mysqli_close($conn);
         header("Location: ../views/viewAllProducts.php");
     }
+    
+    if(isset($_POST['Order']))
+    {
+        $productname = mysqli_real_escape_string($conn, $_POST['productName']);
+        
+        $sql ="INSERT INTO cart(productNAme) Values('$productname')";
+        
+        mysqli_query($conn, $sql);
+        mysli_close($conn);
+        header("Location: cartView.php");
+    }
 ?>
