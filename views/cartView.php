@@ -29,8 +29,8 @@ $conn = $db->dbConnect();
 	mysqli_close($conn);
 	
 	echo "<input type = 'text' name = 'creditcard'>" ."</br>";
-	echo "input type = 'text' style = 'width: 120px' name = 'date'>" ."</br>";
-	echo "input type = 'text' style = 'width: 120px' name = 'securitycode'>" ."</br>";
+	echo "<input type = 'text' style = 'width: 120px' name = 'date'>" ."</br>";
+	echo "<input type = 'text' style = 'width: 120px' name = 'securitycode'>" ."</br>";
 	?>
     </table>
     </body>
