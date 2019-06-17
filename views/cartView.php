@@ -1,8 +1,9 @@
 <?php
 require_once '../database.php';
 require_once '../functions.php';
-$db= new funcs();
-
+$func= new funcs();
+$db = new myfuncs();
+$conn = $db->dbConnect();
 ?>
 
 <html>
@@ -16,7 +17,7 @@ $db= new funcs();
 		<th>Product Name</th>
 	</tr>
 	<?php
-	$product = $db->getAllIncart();
+	$product = $func->getAllIncart();
 	for($id = 0;$id < count($product);$id++)
 	{
     	   echo "<tr>";
@@ -25,6 +26,7 @@ $db= new funcs();
            echo "</form></tr>";
 	}
 	echo "<a href='../views/checkout.php'>Place Order</a>";
+	mysqli_close($conn);
 	?>
     </table>
     </body>
