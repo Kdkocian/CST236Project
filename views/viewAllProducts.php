@@ -57,7 +57,7 @@ $db= new funcs();
                 else 
                 {
                     echo '<div classs="col-md-4">';
-                    echo '<input type="button" name = "order" value="Order"/>';
+                    echo '<input type = "hidden" name = "productName" value = "'.$product[$id][1].'"><input type="button" name = "order" value="Order"/>';
                     echo "</div>";
                 }
         echo "</form>";
