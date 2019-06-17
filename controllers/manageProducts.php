@@ -41,8 +41,8 @@
     if(isset($_POST['order']))
     {
         $product = mysqli_real_escape_string($conn, $_POST['productName']);
-        
-        $sql ="INSERT INTO cart(productNAme) VALUES('$product')";
+        $id = mysqli_real_escape_string($conn, $_POST['ID']);
+        $sql ="INSERT INTO cart(productIDs, productNAme) VALUES('$id','$product')";
         
         mysqli_query($conn, $sql);
         mysli_close($conn);
