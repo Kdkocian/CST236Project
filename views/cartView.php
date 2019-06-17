@@ -27,6 +27,10 @@ $conn = $db->dbConnect();
 	}
 	echo "<a href='../views/checkout.php'>Place Order</a>";
 	mysqli_close($conn);
+	
+	echo "<input type = 'text' name = 'creditcard'>" ."</br>";
+	echo "input type = 'text' style = 'width: 120px' name = 'date'>" ."</br>";
+	echo "input type = 'text' style = 'width: 120px' name = 'securitycode'>" ."</br>";
 	?>
     </table>
     </body>
