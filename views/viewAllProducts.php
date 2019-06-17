@@ -51,7 +51,7 @@ $db= new funcs();
                     
                 if($db->getUseradmin())
                 {
-                echo '<div classs="col-md-4">';
+                echo '<div class="col-md-4">';
                 echo '<input type="button" name = "ADD" value="Add" onclick="createAddField()" />';
                 echo '<input type="submit" name = "delete" value="Delete" />';
                 echo '<input type="button" class="editButton" name="edit" value="Edit" onclick="createEditField('.$id.', \''.$product[$id][0].'\', \''.$product[$id][1].'\', \''.$product[$id][2].'\', \''.$product[$id][3].'\')"/>';
@@ -59,8 +59,8 @@ $db= new funcs();
                 } 
                 else 
                 {
-                    echo '<div classs="col-md-4">';
-                    echo '<input type="submit" name = "order" value="Order"/>';
+                    echo '<div class="col-md-4">';
+                    echo '<input type="submit" name = "order" value="Order" />';
                     echo "</div>";
                 }
         echo "</form>";
