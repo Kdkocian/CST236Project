@@ -65,6 +65,7 @@ $db= new funcs();
                 }
                 echo "</div>";
         echo "</form>";
+        echo "<hr>";
     echo '</li>';
     }
     echo '</ul>';
