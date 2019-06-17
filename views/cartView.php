@@ -28,9 +28,9 @@ $conn = $db->dbConnect();
 	echo "<a href='../views/checkout.php'>Place Order</a>" ."</br>";
 	mysqli_close($conn);
 	
-	echo "<label>Card Number</label> <input type = 'text' name = 'creditcard'>" ."</br>";
-	echo "<label>Date</label> <input type = 'date' style = 'width: 120px' name = 'date'>" ."</br>";
-	echo "<label>security code</label> <input type = 'text' style = 'width: 30px' name = 'securitycode'>" ."</br>";
+	echo "<label>Card Number</label> <input type = 'text' pattern = '.{15,16}' name = 'creditcard' required>" ."</br>";
+	echo "<label>Date</label> <input type = 'date' style = 'width: 120px' name = 'date' required>" ."</br>";
+	echo "<label>security code</label> <input type = 'text' style = 'width: 30px' name = 'securitycode' required>" ."</br>";
 	?>
     </table>
     </body>
