@@ -25,12 +25,12 @@ $conn = $db->dbConnect();
                echo "<td>".$product[$id][1]."</td>";
            echo "</form></tr>";
 	}
-	echo "<a href='../views/checkout.php'>Place Order</a>";
+	echo "<a href='../views/checkout.php'>Place Order</a>" ."</br>";
 	mysqli_close($conn);
 	
-	echo "<input type = 'text' name = 'creditcard'>" ."</br>";
-	echo "<input type = 'text' style = 'width: 120px' name = 'date'>" ."</br>";
-	echo "<input type = 'text' style = 'width: 120px' name = 'securitycode'>" ."</br>";
+	echo "<label>Card Number</label> <input type = 'text' name = 'creditcard'>" ."</br>";
+	echo "<label>Date</label> <input type = 'date' style = 'width: 120px' name = 'date'>" ."</br>";
+	echo "<label>security code</label> <input type = 'text' style = 'width: 30px' name = 'securitycode'>" ."</br>";
 	?>
     </table>
     </body>
