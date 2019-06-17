@@ -63,6 +63,7 @@ $db= new funcs();
                     echo '<input type="submit" name = "order" value="Order" />';
                     echo "</div>";
                 }
+                echo "</div>";
         echo "</form>";
     echo '</li>';
     }
