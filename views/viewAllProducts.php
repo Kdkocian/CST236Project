@@ -52,7 +52,7 @@ $db= new funcs();
                 echo "</div>";
                 echo '<input type = "hidden" name = "productName" value = "'.$product[$id][1].'">';
                 echo '<input type = "hidden" name = "ID" value = "'.$product[$id][0].'">';
-                echo '<input type = "hidden" name = "prductPrice" value = "'.$product[$id][5].'">';
+                echo '<input type = "hidden" name = "productPrice" value = "'.$product[$id][5].'">';
                     
                 if($db->getUseradmin())
                 {
