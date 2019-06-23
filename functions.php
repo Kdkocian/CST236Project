@@ -35,7 +35,7 @@ class funcs
     {
        $db = new myfuncs();
        $conn = $db->dbConnect();
-       $sql = "SELECT productID, productName, productDescript, inStock, productImage FROM products";
+       $sql = "SELECT productID, productName, productDescript, inStock, productPrice, productImage FROM products";
        $products = array();
        $result = mysqli_query($conn, $sql);
        
