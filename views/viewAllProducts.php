@@ -19,7 +19,7 @@ $db= new funcs();
     echo "<div class='col-md-3'>Product Name</div>";
     echo "<div class='col-md-3'>Product Description</div>";
     echo "<div class='col-md-3'>Product In Stock</div>";
-    echo "<div class='col-md-3'>Product Price</div>";
+    echo "<div class='col-md-4'>Product Price</div>";
     if ($db->getUseradmin())
     {
     echo "<div class='col-md-4'>CRUD</div>";
@@ -47,7 +47,7 @@ $db= new funcs();
                 echo "<div class='col-md-3'>";
                     echo "<label>".$product[$id][3]."</label>";
                 echo "</div>";
-                echo "<div class='col-md-3'>";
+                echo "<div class='col-md-4'>";
                     echo "<label>".$product[$id][5]."</label>";
                 echo "</div>";
                 echo '<input type = "hidden" name = "productName" value = "'.$product[$id][1].'">';
