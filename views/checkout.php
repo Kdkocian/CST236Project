@@ -1,8 +1,4 @@
 <?php
-include 'database.php';
-$db = new myfuncs();
-$conn = $db->dbConnect();
-
 echo "Your order is being processed";
 
 /*$sql = "DELETE FROM cart WHERE productIDs > 0";
