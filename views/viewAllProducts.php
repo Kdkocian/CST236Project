@@ -15,11 +15,11 @@ $db= new funcs();
     echo '<ul id="content" class="list-unstyled">';
     echo '<li>';
     echo "<div class='row'>";
-    echo "<div class='col-md-2'>Product ID</div>";
+    echo "<div class='col-md-1'>Product ID</div>";
     echo "<div class='col-md-3'>Product Name</div>";
     echo "<div class='col-md-3'>Product Description</div>";
-    echo "<div class='col-md-3'>Product In Stock</div>";
-    echo "<div class='col-md-3'>Product Price</div>";
+    echo "<div class='col-md-1'>Product In Stock</div>";
+    echo "<div class='col-md-1'>Product Price</div>";
     if ($db->getUseradmin())
     {
     echo "<div class='col-md-4'>CRUD</div>";
