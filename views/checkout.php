@@ -39,7 +39,7 @@ echo "<a href='viewAllProducts.php'>Back to Store</a>"."</br>";
 	$sql = "SELECT SUM(productPrice) FROM cart";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result);
-	echo "Your total is: ".$row['productPrice'];
+	echo "Your total is: ".$row['SUM(productPrice)'];
 	mysqli_close($conn);
 	?>
     </table>
