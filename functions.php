@@ -51,13 +51,13 @@ class funcs
         $db = new myfuncs();
         $conn = $db->dbConnect();
         
-        $sql = "SELECT productIDs, productNAme FROM cart";
+        $sql = "SELECT productIDs, productNAme, productPrice FROM cart";
         $products = array();
         $result = mysqli_query($conn, $sql);
         
         while($row = mysqli_fetch_array($result))
         {
-            $products[] = array($row['productIDs'], $row['productNAme']);
+            $products[] = array($row['productIDs'], $row['productNAme'], $row['productPrice']);
         }
         mysqli_close($conn);
         return $products;
