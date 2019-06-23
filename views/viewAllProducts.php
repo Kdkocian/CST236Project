@@ -47,12 +47,12 @@ $db= new funcs();
                 echo "<div class='col-md-3'>";
                     echo "<label>".$product[$id][3]."</label>";
                 echo "</div>";
-                echo "<div class='col-md-4'>";
-                    echo "<label>".$product[$id][5]."</label>";
+                echo "<div class='col-md-5'>";
+                    echo "<label>".$product[$id][4]."</label>";
                 echo "</div>";
                 echo '<input type = "hidden" name = "productName" value = "'.$product[$id][1].'">';
                 echo '<input type = "hidden" name = "ID" value = "'.$product[$id][0].'">';
-                echo '<input type = "hidden" name = "productPrice" value = "'.$product[$id][5].'">';
+                echo '<input type = "hidden" name = "productPrice" value = "'.$product[$id][4].'">';
                     
                 if($db->getUseradmin())
                 {
