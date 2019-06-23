@@ -48,7 +48,7 @@ $db= new funcs();
                     echo "<label>".$product[$id][3]."</label>";
                 echo "</div>";
                 echo "<div class='col-md-1'>";
-                    echo "<label>".$product[$id][4]."</label>";
+                    echo "<label>$".$product[$id][4]."</label>";
                 echo "</div>";
                 echo '<input type = "hidden" name = "productName" value = "'.$product[$id][1].'">';
                 echo '<input type = "hidden" name = "ID" value = "'.$product[$id][0].'">';
