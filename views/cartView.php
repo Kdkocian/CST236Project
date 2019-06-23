@@ -24,7 +24,7 @@ $conn = $db->dbConnect();
     	   echo "<tr>";
     	       echo "<td>".$product[$id][0]."</td>";
                echo "<td>".$product[$id][1]."</td>";
-               echo "<td>".$product[$id][2]."</td>";
+               echo "<td>$".$product[$id][2]."</td>";
            echo "</form></tr>";
 	}
 	mysqli_close($conn);
