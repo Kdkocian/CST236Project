@@ -4,6 +4,20 @@ require_once '../functions.php';
 $func= new funcs();
 $db = new myfuncs();
 $conn = $db->dbConnect();
+$product = $func->getAllIncart();
+
+$allproducts = "";
+$sum = 0;
+
+for($i = 0; $i < count($product); $i++)
+{
+    $allproducts += $product[$i][1].", ";
+    $sum += $product[$i][2];
+}
+
+$sql = "INSERT INTO orderhistory(productNAme, productPrice) Values($allproducts, $sum)";
+mysqli_query($conn, $sql);
+
 ?>
 
 <html>
@@ -18,7 +32,6 @@ $conn = $db->dbConnect();
 		<th>Price</th>
 	</tr>
 	<?php
-	$product = $func->getAllIncart();
 	for($id = 0;$id < count($product);$id++)
 	{
     	   echo "<tr>";
