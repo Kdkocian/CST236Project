@@ -13,8 +13,9 @@ $db = new funcs();
 <?php
     if($db->getUseradmin())
     {
-        echo "<a href='management.php'>View Users</a>";
-        echo "<a href='viewAllProducts.php'>ViewProducts</a>";
+        echo "<a href='management.php'>View Users</a>" . "</br>";
+        echo "<a href='viewAllProducts.php'>ViewProducts</a>" . "</br>";
+        echo "<a href='sRV.php'>Sales Report</a>" . "</br>";
     } 
     else 
     {
