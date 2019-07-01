@@ -9,10 +9,16 @@ $result = mysqli_query($conn, $sql);
 
 if ($result->num_rows > 0)
 {
-    while($row = $result->fetch_assoc())
+    while($row = mysqli_fetch_array($result))
     {
-      echo "$row[ID], $row[productNAme], $row[productPrice]";  
+      echo ".$row[ID], $row[productNAme], $row[productPrice]";  
     }
 }
+
+$sqlt = "SELECT SUM(productPrice) FROM orderhistory";
+$results = mysqli_query($conn, $sqlt);
+$rows = mysqli_fetch_array($results);
+echo "You have made: $".$rows['SUM(productPrice)'];
+
 ?>
 
