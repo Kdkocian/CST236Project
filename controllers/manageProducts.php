@@ -45,7 +45,7 @@
         $price = mysqli_real_escape_string($conn, $_POST['productPrice']);
         $sql ="INSERT INTO cart(productIDs, productNAme, productPrice) VALUES('$id','$product', '$price')";
         mysqli_query($conn, $sql);
-        $sqlm = "UPDATE products SET inStock = inStock-1 WHERE productIDs = '$id'";
+        $sqlm = "UPDATE products SET inStock = inStock-1 WHERE productID = '$id'";
         mysqli_query($conn, $sqlm);
        // mysli_close($conn);
         header("Location: ../views/viewAllProducts.php");
