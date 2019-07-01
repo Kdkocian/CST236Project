@@ -22,7 +22,9 @@ if ($result->num_rows > 0)
 $sqlt = "SELECT SUM(productPrice) FROM orderhistory";
 $results = mysqli_query($conn, $sqlt);
 $rows = mysqli_fetch_array($results);
-echo "You have made: $".$rows['SUM(productPrice)'];
+echo "You have made: $".$rows['SUM(productPrice)'] . "</br>";
+
+echo "<a href='../views/loginSuccessful.php'>Back to Login Success</a>" ."</br>";
 
 ?>
 
