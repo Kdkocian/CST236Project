@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $sql);
 echo "<tr>";
 echo "<th>ID, </th>";
 echo "<th>UserID, </th>";
-echo "<th>Total Spent</th>";
+echo "<th>Total Spent</th>" . "</br>";
 echo "</tr>";
 if ($result->num_rows > 0)
 {
