@@ -75,7 +75,7 @@ class funcs
         $sql = "INSERT into coupons(couponCode) VALUES($code)";
         
         mysqli_query($conn, $sql);
-        mysqli_close($conn);
+        
         return $code;
     }   
 }
