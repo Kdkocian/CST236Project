@@ -64,7 +64,6 @@ class funcs
     }
     function couponCode()
     {
-        include '../database.php';
         $db = new myfuncs();
         $conn = $db->dbConnect();
         
@@ -72,7 +71,7 @@ class funcs
         
         $code = "takeit$discount";
         
-        $sql = "INSERT into coupons(couponCode) VALUES($code)";
+        $sql = "INSERT INTO coupons(couponCode) VALUES('$code')";
         
         mysqli_query($conn, $sql);
         
