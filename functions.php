@@ -62,5 +62,21 @@ class funcs
         mysqli_close($conn);
         return $products;
     }
+    function couponCode()
+    {
+        include '../database.php';
+        $db = new myfuncs();
+        $conn = $db->dbConnect();
+        
+        $discount = rand(10, 50);
+        
+        $code = "takeit$discount";
+        
+        $sql = "INSERT into coupons(couponCode) VALUES($code)";
+        
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+        return $code;
+    }   
 }
 ?>

@@ -2,6 +2,7 @@
 include '../functions.php';
 require_once '../database.php';
 $db = new funcs();
+$coupon = $db->couponCode();
 ?>
 <html>
 <head>
@@ -20,6 +21,7 @@ $db = new funcs();
     else 
     {
         echo "<a href='viewAllProducts.php'>ViewProducts</a>";
+        echo "Your Coupon code is ".$coupon;
     }
 
 ?>
