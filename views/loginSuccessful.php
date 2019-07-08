@@ -20,7 +20,7 @@ $coupon = $db->couponCode();
     } 
     else 
     {
-        echo "<a href='viewAllProducts.php'>ViewProducts</a>";
+        echo "<a href='viewAllProducts.php'>ViewProducts</a>" ."</br>";
         echo "Your Coupon code is ".$coupon;
     }
 

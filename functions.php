@@ -67,7 +67,7 @@ class funcs
         $db = new myfuncs();
         $conn = $db->dbConnect();
         
-        $discount = rand(10, 50);
+        $discount = '10';
         
         $code = "takeit$discount";
         
@@ -77,5 +77,15 @@ class funcs
         
         return $code;
     }   
+    function checkCode()
+    {
+       $db = new myfuncs();
+       $conn = $db->dbConnect();
+       
+       $code = $_POST['couponcode']; 
+       $couponcode = "SELECT * FROM coupons WHERE couponCode = $code"; 
+       
+       mysqli_query($conn, $couponcode);       
+    }
 }
 ?>

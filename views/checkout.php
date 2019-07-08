@@ -6,13 +6,8 @@ $db = new myfuncs();
 $conn = $db->dbConnect();
 echo "Your order is being processed"."</br>";
 
-/*$sql = "DELETE FROM cart WHERE productIDs > 0";
-
-mysqli_query($conn, $sql);
-
-mysqli_close($conn);*/
-
 echo "<a href='viewAllProducts.php'>Back to Store</a>"."</br>";
+
 ?>
 <html>
 	<head>
@@ -35,11 +30,23 @@ echo "<a href='viewAllProducts.php'>Back to Store</a>"."</br>";
                echo "<td>$".$product[$id][2]."</td>";
            echo "</form></tr>";
 	}
-	
+	if($_POST['couponcode'] == "")
+	{
+	    $sql = "SELECT SUM(productPrice) FROM cart";
+	    $result = mysqli_query($conn, $sql);
+	    $row = mysqli_fetch_array($result);
+	    echo "Your total is: $".$row['SUM(productPrice)'];
+	}
+	else 
+	{
+	    $sql = "SELECT SUM(productPrice) FROM cart";
+	    $result = mysqli_query($conn, $sql);
+	    $row = mysqli_fetch_array($result);
+	    $discountprice = "SUM(productPrice) * (.10)";
+	    $newPrice = "SUM(productPrice) - $discountprice";
+	    echo "Your total is: $".$newPrice;
+	}
 	$sql = "SELECT SUM(productPrice) FROM cart";
-	$result = mysqli_query($conn, $sql);
-	$row = mysqli_fetch_array($result);
-	echo "Your total is: $".$row['SUM(productPrice)'];
 	mysqli_close($conn);
 	?>
     </table>
