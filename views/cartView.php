@@ -45,6 +45,7 @@ mysqli_query($conn, $sql);
     	echo "<label>Card Number</label> <input type = 'text' pattern = '.{15,16}' style = 'width:120px' name = 'creditcard' required>" ."</br>";
     	echo "<label>Date</label> <input type = 'date' style = 'width: 120px' name = 'date' required>" ."</br>";
     	echo "<label>security code</label> <input type = 'text' style = 'width: 30px' name = 'securitycode' required>" ."</br>";
+    	echo "<label>coupon Code</label> <input type = 'text' style = 'width: 30px' name = 'couponcode'>" ."</br>";
 	echo "<input type = 'submit' name = checkout>";
 	echo "</form>";
 	?>
