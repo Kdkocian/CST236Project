@@ -46,7 +46,7 @@ echo "<a href='viewAllProducts.php'>Back to Store</a>"."</br>";
 	    $total = $row['SUM(productPrice)'];
 	    $discountprice = $total * $percentoff;
 	    $newPrice = $total - $discountprice;
-	    echo "Your total is: $".$newPrice;
+	    echo "Your total is: $".money_format('%1', $newPrice);
 	}
 	$sql = "SELECT SUM(productPrice) FROM cart";
 	mysqli_close($conn);
